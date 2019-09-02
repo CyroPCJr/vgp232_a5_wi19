@@ -11,8 +11,8 @@ namespace Assignment5.Data
         /// </summary>
         public PokemonReader()
         {
-        }
 
+        }
         /// <summary>
         /// Load a xml file that contains Pokemon Data to be deserialized into a list of Pokemons
         /// </summary>
@@ -31,6 +31,7 @@ namespace Assignment5.Data
                 try
                 {
                     dex = new XmlSerializer(typeof(Pokedex)).Deserialize(file) as Pokedex;
+
                 }
                 catch (Exception ex)
                 {
@@ -40,8 +41,6 @@ namespace Assignment5.Data
 
             return dex;
         }
-
-
         public PokemonBag LoadPokemonBag(string filepath)
         {
             if (!File.Exists(filepath))

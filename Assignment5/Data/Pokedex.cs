@@ -16,6 +16,7 @@ namespace Assignment5.Data
             Pokemons = new List<Pokemon>();
         }
 
+
         public Pokemon GetPokemonByIndex(int index)
         {
             Pokemon temp = new Pokemon();
@@ -25,10 +26,12 @@ namespace Assignment5.Data
                 temp = Pokemons[idx];
             }
             return temp;
+
         }
 
         public Pokemon GetPokemonByName(string name)
         {
+
             Pokemon temp = new Pokemon();
             int index = Pokemons.FindIndex(i => i.Name == name);
             if (index != -1)
@@ -47,6 +50,7 @@ namespace Assignment5.Data
         public Pokemon GetHighestDefensePokemon() => Pokemons.OrderByDescending(p => p.Defense).First();
 
         public Pokemon GetHighestMaxCPPokemon() => Pokemons.OrderByDescending(p => p.MaxCP).First();
+
 
     }
 }
