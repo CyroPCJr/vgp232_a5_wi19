@@ -1,4 +1,6 @@
-﻿namespace Assignment5.Data
+﻿using System;
+
+namespace Assignment5.Data
 {
     public class Item
     {
